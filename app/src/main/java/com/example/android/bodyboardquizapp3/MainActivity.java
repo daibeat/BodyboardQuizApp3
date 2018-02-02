@@ -123,17 +123,18 @@ public class MainActivity extends AppCompatActivity {
         calculateScore();
         EditText nameField = (EditText) findViewById(R.id.enterName);
         String enterName = nameField.getText().toString();
-        String text = enterName + ", your score is " + points;
+        String text;
+        text = enterName + getString(R.string.scoreIs) + points;
         if (points <= 1) {
-            text += "\nThat is a real wipeout";
+            text += getString(R.string.wipeout);
         } else if (points <= 3) {
-            text += "\nWell, I am sure you can do it better!";
+            text += getString(R.string.doItBetter);
         } else if (points <= 5) {
-            text += "\nExcellent rider!";
+            text += getString(R.string.Excellent);
         } else if (points <= 6) {
-            text += "\nYou are an authentic bodyboarder!";
+            text += getString(R.string.authentic);
         } else if (points <= 7) {
-            text += "\nAwesome, You are a pro bodyboarder!";
+            text += getString(R.string.awesome);
         }
 
         int duration = Toast.LENGTH_LONG;
